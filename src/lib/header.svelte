@@ -13,7 +13,7 @@
 </script>
 
 <header
-	class="relative overflow-hidden w-full h-screen cursor-none z-10"
+	class="relative z-10 h-screen w-full cursor-none overflow-hidden"
 	use:cursor={{ pos, isMouseOver }}
 	style:--pos-x="{$pos.x}px"
 	style:--pos-y="{$pos.y}px"
@@ -26,19 +26,19 @@
 		<div transition:fade={{ duration: 250 }} class="cursor">
 			<div class="circle">
 				<p
-					class="uppercase max-w-[4ch] font-medium text-[14px] tracking-tight leading-[1.1] text-center"
+					class="max-w-[4ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
 				>
 					Play Reel
 				</p>
 			</div>
 			<p
-				class="font-medium text-[14px] tracking-tight leading-[1.1] text-center max-w-[11ch] uppercase"
+				class="max-w-[11ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
 			>
 				basic/depts 2010-22
 			</p>
 		</div>
 	{/if}
-	<video class="w-full h-full object-cover z-10" loop preload="auto" autoplay muted>
+	<video class="z-10 h-full w-full object-cover" loop preload="auto" autoplay muted>
 		<source src="/header.mp4" type="video/mp4" />
 		<track kind="captions" />
 	</video>
@@ -46,7 +46,7 @@
 
 <style>
 	.cursor {
-		@apply absolute pointer-events-none top-0 will-change-transform left-0 z-20 grid gap-2;
+		@apply pointer-events-none absolute top-0 left-0 z-20 grid gap-2 will-change-transform;
 		transform: translate3d(
 			calc(var(--pos-x, 0) - 50%),
 			calc(var(--pos-y, 0) - (var(--dim) / 2)),
@@ -55,6 +55,6 @@
 	}
 
 	.cursor .circle {
-		@apply w-[var(--dim)] h-[var(--dim)] bg-white-full rounded-full grid place-items-center scale-[var(--scale,1)];
+		@apply grid h-[var(--dim)] w-[var(--dim)] scale-[var(--scale,1)] place-items-center rounded-full bg-white-full;
 	}
 </style>

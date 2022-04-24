@@ -2,7 +2,10 @@
 	import IntroLogo from './intro-logo.svelte';
 </script>
 
-<header class="fixed grid place-items-center top-0 left-0 w-full h-full z-[999] bg-white-full noise-bg slide-out" style:--animation-delay="1s">
+<header
+	class="slide-out noise-bg fixed top-0 left-0 z-[999] grid h-full w-full place-items-center bg-white-full text-3xl"
+	style:--animation-delay="1s"
+>
 	<div class="slide-out" style:--slide-height="243px" style:--animation-delay="0s">
 		<IntroLogo />
 	</div>

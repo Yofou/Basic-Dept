@@ -3,4 +3,4 @@
 </script>
 
 <Header />
-<div class="w-full h-[500px]" />
+<div class="h-[500px] w-full" />
