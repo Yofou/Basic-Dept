@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Header from '$lib/header.svelte';
+	import Work from '$lib/work.svelte';
 </script>
 
 <Header />
-<div class="h-[500px] w-full" />
+<main class="px-20 pb-[188px]">
+	<Work />
+</main>
