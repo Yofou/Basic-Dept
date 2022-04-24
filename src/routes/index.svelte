@@ -1,1 +1,6 @@
-<h1 class="text-3xl font-medium uppercase">Hello world</h1>
+<script lang="ts">
+	import Header from '$lib/header.svelte';
+</script>
+
+<Header />
+<div class="w-full h-[500px]" />
