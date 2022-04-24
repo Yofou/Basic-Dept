@@ -1,4 +1,5 @@
 <script>
+	import Intro from '$lib/intro.svelte';
 	import '$lib/shared/global.css';
 </script>
 
@@ -6,4 +7,5 @@
 	<title>BASIC | Digital Branding & Experience Design Agency</title>
 </svelte:head>
 
+<Intro />
 <slot />
