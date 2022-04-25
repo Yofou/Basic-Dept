@@ -73,7 +73,7 @@
 	}
 
 	.scrolled-nav {
-		@apply noise-bg bg-white-full text-black-full;
+		@apply noise-bg text-black-full;
 	}
 
 	.scrolled-nav a {

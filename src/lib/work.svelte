@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from "./button.svelte";
-import WorkCards from "./work-cards.svelte";
+	import WorkCards from "./work-cards.svelte";
+import WorkHr from "./work-hr.svelte";
 </script>
 
 <section class="grid grid-cols-[1fr,max-content] grid-rows-1 py-32">
@@ -29,3 +30,5 @@ import WorkCards from "./work-cards.svelte";
 		</video>
 	</WorkCards>
 </section>
+
+<WorkHr />

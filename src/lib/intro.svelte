@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="slide-out noise-bg fixed top-0 left-0 z-[999] grid h-full w-full place-items-center bg-white-full text-3xl"
+	class="slide-out noise-bg fixed top-0 left-0 z-[999] grid h-full w-full place-items-center text-3xl"
 	style:--animation-delay="1s"
 >
 	<div class="slide-out" style:--slide-height="243px" style:--animation-delay="0s">

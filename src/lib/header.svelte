@@ -3,13 +3,25 @@
 	import { spring, tweened } from 'svelte/motion';
 	import { fade } from 'svelte/transition';
 	import { writable } from 'svelte/store';
+	import { onMount } from 'svelte';
 
-	const pos = spring({ x: 0, y: 0 }, { damping: 1, stiffness: 0.3 });
+	let resting = { x: 0, y: 0 };
+	const pos = spring(resting, { damping: 1, stiffness: 0.3 });
 	const scale = tweened(1, { duration: 250 });
 	const isMouseOver = writable(false);
 
 	const onMouseDown = () => ($scale = 0.75);
 	const onMouseUp = () => ($scale = 1);
+
+	let container: HTMLElement;
+	onMount(() => {
+		const rect = container.getBoundingClientRect();
+
+		resting.y = rect.height / 2;
+		resting.x = rect.width / 2;
+	});
+
+	$: if (!$isMouseOver) $pos = resting;
 </script>
 
 <header
@@ -21,23 +33,25 @@
 	style:--dim="120px"
 	on:mousedown={onMouseDown}
 	on:mouseup={onMouseUp}
+	bind:this={container}
 >
-	{#if $isMouseOver}
-		<div transition:fade={{ duration: 250 }} class="cursor">
-			<div class="circle">
+	<div class="cursor">
+		<div class="circle">
+			{#if $scale === 1}
 				<p
 					class="max-w-[4ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
+	                transition:fade 
 				>
 					Play Reel
 				</p>
-			</div>
-			<p
-				class="max-w-[11ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
-			>
-				basic/depts 2010-22
-			</p>
+			{/if}
 		</div>
-	{/if}
+		<p
+			class="max-w-[11ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
+		>
+			basic/depts 2010-22
+		</p>
+	</div>
 	<video class="z-10 h-full w-full object-cover" loop preload="auto" autoplay muted>
 		<source src="/header.mp4" type="video/mp4" />
 		<track kind="captions" />

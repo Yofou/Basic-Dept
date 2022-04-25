@@ -22,10 +22,11 @@ module.exports = {
 		}
 	},
 	plugins: [
-		plugin(({ addComponents }) => {
+		plugin(({ addComponents, theme }) => {
 			addComponents({
 				'.noise-bg': {
-					background: 'url(/noise.png)',
+					backgroundColor: theme("colors.white.300"),
+					background: 'url(/noise.png) #f4f4f4',
 					animation: 'noise 1s steps(2) infinite'
 				}
 			});
