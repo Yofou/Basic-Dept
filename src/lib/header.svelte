@@ -6,11 +6,11 @@
 	import { onMount } from 'svelte';
 
 	let resting = { x: 0, y: 0 };
-	const pos = spring(resting, { damping: 1, stiffness: 0.3 });
-	const scale = tweened(1, { duration: 250 });
+	const pos = spring(resting, { damping: 1, stiffness: 0.4 });
+	const scale = tweened(1, { duration: 100 });
 	const isMouseOver = writable(false);
 
-	const onMouseDown = () => ($scale = 0.75);
+	const onMouseDown = () => ($scale = 0.6);
 	const onMouseUp = () => ($scale = 1);
 
 	let container: HTMLElement;
@@ -21,7 +21,10 @@
 		resting.x = rect.width / 2;
 	});
 
-	$: if (!$isMouseOver) $pos = resting;
+	$: if (!$isMouseOver) {
+		$pos = resting;
+		$scale = 1;
+	}
 </script>
 
 <header
@@ -40,7 +43,7 @@
 			{#if $scale === 1}
 				<p
 					class="max-w-[4ch] text-center text-[14px] font-medium uppercase leading-[1.1] tracking-tight"
-	                transition:fade 
+					transition:fade={{ duration: 100 }}
 				>
 					Play Reel
 				</p>

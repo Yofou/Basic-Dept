@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@sveltejs/adapter-auto': next
-  '@sveltejs/adapter-vercel': ^1.0.0-next.49
+  '@sveltejs/adapter-vercel': ^1.0.0-next.50
   '@sveltejs/kit': next
   '@types/tailwindcss': ^3.0.10
   '@typescript-eslint/eslint-plugin': ^5.20.0
@@ -19,19 +19,16 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.10
   svelte: ^3.47.0
   svelte-check: ^2.7.0
-  svelte-embla: ^0.0.6
+  svelte-embla: ^0.0.7
   svelte-preprocess: ^4.10.6
   tailwindcss: ^3.0.24
   tslib: ^2.4.0
   typescript: ~4.6.3
 
-dependencies:
-  svelte-embla: 0.0.6
-
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.0-next.38
-  '@sveltejs/adapter-vercel': 1.0.0-next.49
-  '@sveltejs/kit': 1.0.0-next.320_svelte@3.47.0
+  '@sveltejs/adapter-auto': 1.0.0-next.39
+  '@sveltejs/adapter-vercel': 1.0.0-next.50
+  '@sveltejs/kit': 1.0.0-next.321_svelte@3.47.0
   '@types/tailwindcss': 3.0.10
   '@typescript-eslint/eslint-plugin': 5.20.0_4a38537b28d61fb150842b8115287657
   '@typescript-eslint/parser': 5.20.0_eslint@7.32.0+typescript@4.6.3
@@ -47,6 +44,7 @@ devDependencies:
   prettier-plugin-tailwindcss: 0.1.10_prettier@2.6.2
   svelte: 3.47.0
   svelte-check: 2.7.0_postcss@8.4.12+svelte@3.47.0
+  svelte-embla: 0.0.7
   svelte-preprocess: 4.10.6_41810887ae6c6d59323116f47e33fa38
   tailwindcss: 3.0.24
   tslib: 2.4.0
@@ -139,12 +137,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.38:
-    resolution: {integrity: sha512-1//aiV/Wzebj+j5X8VLRs0vJUT3andc/0+IRQwy5ykOwjpNo5/Mj2RX8SA+t5nxBFYyJJf2kj6sszKA8LjRAQQ==}
+  /@sveltejs/adapter-auto/1.0.0-next.39:
+    resolution: {integrity: sha512-mscydZQzI9HZ+IjD+/yxyuKKd4/KxZv/M43BaeBvpuhToEe3crmatIHDQIZc0GBZZgTVpvk8yp3yIM8q3RugLw==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.18
       '@sveltejs/adapter-netlify': 1.0.0-next.55
-      '@sveltejs/adapter-vercel': 1.0.0-next.49
+      '@sveltejs/adapter-vercel': 1.0.0-next.50
     dev: true
 
   /@sveltejs/adapter-cloudflare/1.0.0-next.18:
@@ -162,14 +160,14 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.49:
-    resolution: {integrity: sha512-Me0Zb10iBv+ySVMc0XgI7rdzwiMmeVHq48iVv3oXORa/et/efJVEknVSVk22q15XRqys7DhoPirf54Mz4jElFQ==}
+  /@sveltejs/adapter-vercel/1.0.0-next.50:
+    resolution: {integrity: sha512-yta0AkuWEr7qrm8LB34F4ZdCtMxj+cHD4huwrRYCgjv+PSJHLPwe7aH53+Mhrv6La0TgeyQ/f2lTyhBMXZXn9Q==}
     dependencies:
       esbuild: 0.14.38
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.320_svelte@3.47.0:
-    resolution: {integrity: sha512-BDgF+gd73Gxls65rb3H2oacdQUrK8fM0X174t2kMfGS+MeNN6oZ+Kw+j0IJMzMaZSGco89+/wkPeArvDzM/2MQ==}
+  /@sveltejs/kit/1.0.0-next.321_svelte@3.47.0:
+    resolution: {integrity: sha512-Egdmxc+oxmKKhXAtLLHj6LnZQnfxgk/DpdRitDxDlSQq/hj1zSVswe3kGjPDaquNMkxXbvZcHwhbZvNnVTnWag==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -214,8 +212,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/node/17.0.26:
-    resolution: {integrity: sha512-z/FG/6DUO7pnze3AE3TBGIjGGKkvCcGcWINe1C7cADY8hKLJPDYpzsNE37uExQ4md5RFtTCvg+M8Mu1Enyeg2A==}
+  /@types/node/17.0.27:
+    resolution: {integrity: sha512-4/Ke7bbWOasuT3kceBZFGakP1dYN2XFd8v2l9bqF2LNWrmeU07JLpp56aEeG6+Q3olqO5TvXpW0yaiYnZJ5CXg==}
     dev: true
 
   /@types/pug/2.0.6:
@@ -225,7 +223,7 @@ packages:
   /@types/sass/1.43.1:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
-      '@types/node': 17.0.26
+      '@types/node': 17.0.27
     dev: true
 
   /@types/tailwindcss/3.0.10:
@@ -500,7 +498,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001332
-      electron-to-chromium: 1.4.118
+      electron-to-chromium: 1.4.119
       escalade: 3.1.1
       node-releases: 2.0.3
       picocolors: 1.0.0
@@ -653,12 +651,13 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /electron-to-chromium/1.4.118:
-    resolution: {integrity: sha512-maZIKjnYDvF7Fs35nvVcyr44UcKNwybr93Oba2n3HkKDFAtk0svERkLN/HyczJDS3Fo4wU9th9fUQd09ZLtj1w==}
+  /electron-to-chromium/1.4.119:
+    resolution: {integrity: sha512-HPEmKy+d0xK8oCfEHc5t6wDsSAi1WmE3Ld08QrBjAPxaAzfuKP66VJ77lcTqxTt7GJmSE279s75mhW64Xh+4kw==}
     dev: true
 
   /embla-carousel/6.2.0:
     resolution: {integrity: sha512-dSNsiQ7nmSQJZgbYfZCLdzrnznHwpaAcdJFcMRKgm/pjH1doOgxmfsvlMy4VfO4J11hLz8jm/W8WxSSDqfuu4w==}
+    dev: true
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1821,11 +1820,11 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-embla/0.0.6:
-    resolution: {integrity: sha512-oS0UTBPhkFSOqx4z7mbxP8kj5yY9JDwcdiwwl6w3ohTvdesoemwBc+rH8tsgECDoTzh7fgHq1wnGK++5UuSdcQ==}
+  /svelte-embla/0.0.7:
+    resolution: {integrity: sha512-IN2OAFRtdMaYFoUX4Uf33Un1GZ2Axrw4cX57HpVTc1T5epKwFBYn8KqJbD5StPYMMbqZGLWYvZdN1K3W3K9+aw==}
     dependencies:
       embla-carousel: 6.2.0
-    dev: false
+    dev: true
 
   /svelte-hmr/0.14.11_svelte@3.47.0:
     resolution: {integrity: sha512-R9CVfX6DXxW1Kn45Jtmx+yUe+sPhrbYSUp7TkzbW0jI5fVPn6lsNG9NEs5dFg5qRhFNAoVdRw5qQDLALNKhwbQ==}

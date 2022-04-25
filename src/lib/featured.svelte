@@ -22,9 +22,14 @@
 		resting.y = carousel.offsetTop + 60 + 375
 	});
 
+	const onSettle = () => {
+		console.log( "carousel has settled" )
+		$scale = 1
+	}
+
 	$: if (!$isMouseOver) {
 		$pos = resting;
-	}
+	} 
 </script>
 
 <section class="mt-[188px]">
@@ -41,6 +46,7 @@
 		use:embla={{ skipSnaps: false, dragFree: true, align: 'start', containScroll: 'keepSnaps' }}
 		on:mousedown={onMouseDown}
 		on:mouseup={onMouseUp}
+  		on:e-settle={onSettle}
 	>
 		<div class="height-[445px] grid auto-cols-[432px] grid-flow-col gap-[144px] pl-[144px]">
 			<FeatureCard company="google" src="/google.svg" imgWidth="120px">
