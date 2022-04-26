@@ -15,7 +15,7 @@ const cursor: Action<HTMLElement, CursorOptions> = (node, options) => {
 	};
 
 	const onMouseEnter = (event: MouseEvent) => {
-		pos.set({ x: event.pageX, y: event.pageY })
+		pos.set({ x: event.pageX, y: event.pageY });
 		node.addEventListener('mousemove', onMouseMove);
 		isMouseOver.set(true);
 	};

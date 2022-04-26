@@ -56,7 +56,7 @@
 		</p>
 	</div>
 	<video class="z-10 h-full w-full object-cover" loop preload="auto" autoplay muted>
-		<source src="/header.mp4" type="video/mp4" />
+		<source src="/header.webm" type="video/webm" />
 		<track kind="captions" />
 	</video>
 </header>
