@@ -1,5 +1,5 @@
 import type { Action } from 'svelte/action';
-import { isDark } from './store';
+import { isDark } from '$lib/store';
 
 const isInView: Action = (node) => {
 	const observer = new IntersectionObserver(

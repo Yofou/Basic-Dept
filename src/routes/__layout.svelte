@@ -2,7 +2,7 @@
 	import { browser } from '$app/env';
 	import Intro from '$lib/intro.svelte';
 	import Navbar from '$lib/navbar.svelte';
-	import '$lib/shared/global.css';
+	import '$style/global.css';
 	import { isDark } from '$lib/store';
 
 	$: if (browser) {

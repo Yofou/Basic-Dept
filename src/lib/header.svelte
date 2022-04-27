@@ -1,5 +1,5 @@
 <script lang="ts">
-	import cursor from './cursor';
+	import cursor from '$lib/actions/cursor';
 	import { spring, tweened } from 'svelte/motion';
 	import { fade } from 'svelte/transition';
 	import { writable } from 'svelte/store';

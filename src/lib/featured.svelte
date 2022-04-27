@@ -1,12 +1,12 @@
 <script lang="ts">
 	import embla from 'svelte-embla';
-	import cursor from '$lib/cursor';
+	import cursor from '$lib/actions/cursor';
 	import FeatureCard from './feature-card.svelte';
 	import { spring, tweened } from 'svelte/motion';
 	import { writable } from 'svelte/store';
-	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import type { EmblaCarouselType } from 'embla-carousel';
+	import DragCursor from './drag-cursor.svelte';
 
 	let resting = { x: 0, y: 0 };
 	let carousel: HTMLDivElement;
@@ -112,22 +112,7 @@
 		</div>
 	</div>
 
-	<div
-		class="pointer-events-none absolute top-0 left-0 grid h-[120px] w-[120px] translate-y-[calc(var(--y,0)-50%)] translate-x-[calc(var(--x,0)-50%)] scale-[var(--scale,1)] place-items-center rounded-full bg-pink-300/[var(--opacitiy,1)] will-change-transform"
-		style:--x="{$pos.x}px"
-		style:--y="{$pos.y}px"
-		style:--scale={$scale}
-		style:--opacitiy={$opacity}
-	>
-		{#if $scale === 1 && $opacity === 1}
-			<p
-				transition:fade={{ duration: 100 }}
-				class="text-[14px] font-medium uppercase tracking-tighter"
-			>
-				drag
-			</p>
-		{/if}
-	</div>
+	<DragCursor {pos} {opacity} {scale} />
 
 	<div class="h-[2px] w-full overflow-hidden bg-[#b1b1b1]">
 		<div

@@ -1,7 +1,7 @@
 <script>
-	import Button from './button.svelte';
-	import isInView from './is-in-view';
-	import { isDark } from './store';
+	import Button from '$lib/button.svelte';
+	import isInView from '$lib/actions/is-in-view';
+	import { isDark } from '$lib/store';
 </script>
 
 <section class="mt-[180px] grid grid-cols-2 grid-rows-[1181px]" use:isInView>
