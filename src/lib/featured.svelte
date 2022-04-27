@@ -35,8 +35,8 @@
 	let scrollbar = { width: 0 };
 	onMount(() => {
 		const rect = carousel.getBoundingClientRect();
-		resting.x = (rect.left) + rect.width - 60;
-		resting.y = (rect.top + document.documentElement.scrollTop) + 60 + 375;
+		resting.x = rect.left + rect.width - 60;
+		resting.y = rect.top + document.documentElement.scrollTop + 60 + 375;
 
 		scrollbar.width = (rect.width / carousel.scrollWidth) * rect.width;
 	});
@@ -131,7 +131,7 @@
 
 	<div class="h-[2px] w-full overflow-hidden bg-[#b1b1b1]">
 		<div
-			class="h-full w-[var(--scroll-width,0px)] translate-x-[var(--scroll-progress,0)] bg-black-full"
+			class="h-full w-[var(--scroll-width,0px)] translate-x-[var(--scroll-progress,0)] bg-black-full dark:bg-pink-300"
 			style:--scroll-width="{scrollbar.width}px"
 			style:--scroll-progress="{scrollprogress * (carousel?.clientWidth - scrollbar.width)}px"
 		/>

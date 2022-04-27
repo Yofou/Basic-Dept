@@ -5,11 +5,11 @@
 	import '$lib/shared/global.css';
 	import { isDark } from '$lib/store';
 
-	$: if ( browser ) {
-		if ( $isDark ) {
-			document.body.classList.add("dark")
+	$: if (browser) {
+		if ($isDark) {
+			document.body.classList.add('dark');
 		} else {
-			document.body.classList.remove("dark")
+			document.body.classList.remove('dark');
 		}
 	}
 </script>

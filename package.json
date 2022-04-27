@@ -16,6 +16,7 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.50",
 		"@sveltejs/kit": "next",
+		"@types/luxon": "^2.3.1",
 		"@types/tailwindcss": "^3.0.10",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.20.0",

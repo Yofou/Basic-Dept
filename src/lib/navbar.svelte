@@ -77,7 +77,7 @@
 	}
 
 	:global(.dark) .scrolled-nav {
-		background: url(/noise.png) theme("colors.black.300");
+		background: url(/noise.png) theme('colors.black.300');
 		@apply text-white-full;
 	}
 

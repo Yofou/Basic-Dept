@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { DateTime } from 'luxon';
+
 	export let href = '/';
 	export let src: string;
 	export let title: string;
@@ -8,7 +10,7 @@
 
 <a
 	{href}
-	class="group grid w-full grid-cols-[588px,1fr,max-content] grid-rows-[1fr,max-content] justify-items-start border-t border-black-300 pt-5 text-black-300 dark:text-pink-300 gap-x-5"
+	class="group grid w-full grid-cols-[588px,1fr,max-content] grid-rows-[1fr,max-content] justify-items-start gap-x-5 border-t border-black-300 pt-5 text-black-300 dark:text-pink-300"
 >
 	<div class="row-span-2 overflow-hidden">
 		<img
@@ -17,25 +19,16 @@
 			alt=""
 		/>
 	</div>
-	<h2 class="inline h-auto self-start w-full max-w-[842px] text-[42px] font-medium uppercase leading-[1.1]">{title}</h2>
-	<p class="col-start-2 row-start-2">
-		<span class="uppercase font-bold tracking-tight text-[14px]">{tag}</span> 
-		<span>{date}</span>
+	<h2
+		class="h-auto w-full max-w-[842px] self-start text-[42px] font-medium uppercase leading-[1.1] group-hover:underline"
+	>
+		{title}
+	</h2>
+	<p class="col-start-2 row-start-2 text-[14px]">
+		<span class="font-bold uppercase tracking-tight">{tag}</span>
+		<span class="ml-2 text-[14px] font-medium"
+			>{DateTime.fromJSDate(date).toFormat('dd.LL.yyyy')}</span
+		>
 	</p>
-	<img class="row-span-2 w-[30px] h-[30px]" src="/right-arrow.svg" alt="" />
+	<img class="row-span-2 h-[30px] w-[30px]" src="/right-arrow.svg" alt="" />
 </a>
-
-<style>
-	h2 {
-		background-image: linear-gradient(theme('colors.black.300'), theme('colors.black.300'));
-		background-size: 0% 3px;
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-		transition: background-size 250ms ease-in-out;
-	}
-
-	a:hover h2 {
-		background-size: 100% 3px;
-		background-position: left bottom;
-	}
-</style>

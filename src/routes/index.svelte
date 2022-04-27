@@ -1,6 +1,7 @@
 <script lang="ts">
 	import AgencySpotlight from '$lib/agency-spotlight.svelte';
 	import Featured from '$lib/featured.svelte';
+	import Footer from '$lib/footer.svelte';
 	import Header from '$lib/header.svelte';
 	import News from '$lib/news.svelte';
 	import Work from '$lib/work.svelte';
@@ -13,3 +14,5 @@
 	<AgencySpotlight />
 	<News />
 </main>
+
+<Footer />

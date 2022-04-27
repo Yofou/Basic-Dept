@@ -1,5 +1,6 @@
 <button
-	class="border-[color:var(--color)] rounded-[16px] border px-[30px] py-2 text-[11px] font-medium uppercase {$$props.class ?? ""}"
+	class="rounded-[16px] border border-[color:var(--color)] px-[30px] py-2 text-[11px] font-medium uppercase {$$props.class ??
+		''}"
 >
 	<slot />
 </button>

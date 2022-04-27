@@ -4,15 +4,16 @@
 @tailwind utilities;
 
 :root {
-	@apply font-sora font-light;
+	@apply font-sora font-light scroll-smooth;
 }
 
 body {
-	@apply noise-bg min-h-screen w-full transition-colors;
+	@apply noise-bg min-h-screen w-full transition-colors; 
 }
 
-.noise-bg.dark, .dark .noise-bg {
-	background: url(/noise.png) theme("colors.black.300");
+.noise-bg.dark,
+.dark .noise-bg {
+	background: url(/noise.png) theme('colors.black.300');
 }
 
 @keyframes noise {

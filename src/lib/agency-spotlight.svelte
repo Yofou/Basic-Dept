@@ -16,7 +16,9 @@
 			<p>
 				ADWEEK <span class="font-medium">(AGENCY SPOTLIGHT)</span>
 			</p>
-			<Button class="mt-20" --color={ $isDark ? "#f9cdcd" : "black"} --hover-color="white">About Us</Button>
+			<Button class="mt-20" --color={$isDark ? '#f9cdcd' : 'black'} --hover-color="white"
+				>About Us</Button
+			>
 		</div>
 	</div>
 
