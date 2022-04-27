@@ -35,8 +35,8 @@
 	let scrollbar = { width: 0 };
 	onMount(() => {
 		const rect = carousel.getBoundingClientRect();
-		resting.x = carousel.offsetLeft + rect.width - 60;
-		resting.y = carousel.offsetTop + 60 + 375;
+		resting.x = (rect.left) + rect.width - 60;
+		resting.y = (rect.top + document.documentElement.scrollTop) + 60 + 375;
 
 		scrollbar.width = (rect.width / carousel.scrollWidth) * rect.width;
 	});

@@ -3,7 +3,9 @@ const plugin = require('tailwindcss/plugin');
 /**@type {import("tailwindcss/tailwind-config").TailwindConfig}*/
 module.exports = {
 	content: ['./src/**/*.{svelte,html}'],
+	darkMode: "class",
 	theme: {
+		darkMode: "class",
 		colors: {
 			pink: {
 				300: '#f9cdcd'

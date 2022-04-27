@@ -1,5 +1,5 @@
 <button
-	class="border-[var(--color)] rounded-[16px] border px-[30px] py-2 text-[11px] font-medium uppercase"
+	class="border-[color:var(--color)] rounded-[16px] border px-[30px] py-2 text-[11px] font-medium uppercase {$$props.class ?? ""}"
 >
 	<slot />
 </button>

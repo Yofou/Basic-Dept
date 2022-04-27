@@ -76,6 +76,11 @@
 		@apply noise-bg text-black-full;
 	}
 
+	:global(.dark) .scrolled-nav {
+		background: url(/noise.png) theme("colors.black.300");
+		@apply text-white-full;
+	}
+
 	.scrolled-nav a {
 		background-image: linear-gradient(theme('colors.black.full'), theme('colors.black.full'));
 	}
