@@ -7,11 +7,17 @@
 
 	export const pos = spring({ x: 0, y: 0 }, { stiffness: 0.4, damping: 1 });
 	const isMouseOver = writable(false);
-	export const opacity = tweened(1);
+		export const opacity = tweened(1, { duration: 150 });
 	export const scale = tweened(1, { duration: 150 });
 
 	const onMouseDown = () => ($scale = 0.6);
 	const onMouseUp = () => ($scale = 1);
+
+	$: if ($isMouseOver) {
+		$opacity = 1
+	} else {
+		$opacity = 0
+	}
 </script>
 
 <div
