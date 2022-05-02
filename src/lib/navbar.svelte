@@ -2,10 +2,15 @@
 	import NavbarLogo from './navbar-logo.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { isInternalWorkOpen } from './store';
 
 	let direction: 'up' | 'down' = 'up';
 	let previouseScrollValue = 0;
 	let isTop = true;
+
+	const onButonClick = () => {
+		$isInternalWorkOpen = true;
+	};
 
 	const onScroll = () => {
 		isTop = window.scrollY === 0;
@@ -36,7 +41,7 @@
 		<a href="/">Careers</a>
 		<a href="/">Contact</a>
 
-		<button class="justify-self-end">
+		<button on:click={onButonClick} class="justify-self-end">
 			<svg
 				class="w-[22px]"
 				fill="currentColor"

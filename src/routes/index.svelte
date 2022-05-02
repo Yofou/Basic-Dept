@@ -3,16 +3,18 @@
 	import Featured from '$lib/featured.svelte';
 	import Footer from '$lib/footer.svelte';
 	import Header from '$lib/header.svelte';
+	import InternalWork from '$lib/internal-work.svelte';
 	import News from '$lib/news.svelte';
 	import Work from '$lib/work.svelte';
 </script>
 
 <Header />
-<main class="px-20 pb-[188px]">
+<main class="w-full px-20 pb-[188px]">
 	<Work />
 	<Featured />
 	<AgencySpotlight />
 	<News />
+	<InternalWork />
 </main>
 
 <Footer />

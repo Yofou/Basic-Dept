@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 :root {
-	@apply font-sora font-light scroll-smooth;
+	@apply scroll-smooth font-sora font-light;
 }
 
 body {
-	@apply noise-bg min-h-screen w-full transition-colors; 
+	@apply noise-bg min-h-screen w-full overflow-x-hidden transition-colors;
 }
 
 .noise-bg.dark,

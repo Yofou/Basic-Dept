@@ -18,9 +18,7 @@
 	</form>
 
 	<section class="h-full">
-		<h1
-			class="max-w-[30ch] text-[32px] font-normal leading-[1.1] tracking-tight text-white-300"
-		>
+		<h1 class="max-w-[30ch] text-[32px] font-normal leading-[1.1] tracking-tight text-white-300">
 			We collaborate with ambitious brands and people. Let's build. <a
 				class="underline"
 				href="mailto:biz@basicagency.com">biz@basicagency.com</a
@@ -81,6 +79,5 @@
 
 	#address > address:hover {
 		@apply underline;
-
 	}
 </style>
