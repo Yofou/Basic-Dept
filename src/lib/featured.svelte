@@ -33,19 +33,23 @@
 	};
 
 	let scrollbar = { width: 0 };
-	onMount(() => {
+	const findRestingPlace = () => {
 		const rect = carousel.getBoundingClientRect();
 		resting.x = rect.left + rect.width - 60;
 		resting.y = rect.top + document.documentElement.scrollTop + 60 + 375;
 
 		scrollbar.width = (rect.width / carousel.scrollWidth) * rect.width;
-	});
+	}
+
+	onMount(findRestingPlace);
 
 	const onSettle = () => ($scale = 1);
 	$: if (!$isMouseOver) {
 		$pos = resting;
 	}
 </script>
+
+<svelte:window on:resize={findRestingPlace} />
 
 <section class="mt-[188px]">
 	<h1

@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="pointer-events-none absolute top-0 left-0 grid h-[120px] w-[120px] translate-y-[calc(var(--y,0)-50%)] translate-x-[calc(var(--x,0)-50%)] scale-[var(--scale,1)] place-items-center rounded-full bg-pink-300/[var(--opacitiy,1)] will-change-transform z-[var(--z-index,1)]"
+	class="pointer-events-none absolute top-0 left-0 grid h-[120px] w-[120px] scale-[var(--scale,1)] place-items-center rounded-full bg-pink-300/[var(--opacitiy,1)] will-change-transform z-[var(--z-index,1)]"
 	style:--x="{$pos.x}px"
 	style:--y="{$pos.y}px"
 	style:--scale={$scale}
@@ -25,3 +25,9 @@
 		</p>
 	{/if}
 </div>
+
+<style>
+	div {
+		transform: translate3d(calc(var(--x, 0) - 50% ), calc( var(--y, 0) - 50% ), 0) scale(var(--scale, 1 ));
+	}
+</style>

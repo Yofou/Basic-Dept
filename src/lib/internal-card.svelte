@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade } from "svelte/transition";
 
 	export let src: string;
 	export let href = '/';
@@ -8,6 +8,7 @@
 	export let year: number;
 	export let description = '';
 
+	const id = title.split(' ').join('');
 	const fadeOptions = { duration: 250 };
 	let isHovering = false;
 	const onMouseEnter = () => (isHovering = true);
@@ -17,7 +18,7 @@
 <div
 	on:mouseenter={onMouseEnter}
 	on:mouseleave={onMouseLeave}
-	class="group relative px-[10px] border-l border-pink-300 last-of-type:border-x"
+	class="group relative border-l border-pink-300 px-[10px] last-of-type:border-x"
 >
 	<div class="w-full overflow-hidden">
 		<img
@@ -27,13 +28,19 @@
 		/>
 	</div>
 
-	<div class="grid overflow-hidden grid-cols-2 grid-flow-row font-bold auto-rows-[max-content] duration-[250ms] w-full h-[150px] group-hover:h-[250px] absolute bottom-0 left-0 transition-[height] bg-black-300 p-5 px-[30px]">
-		<h1 class="uppercase text-[22px] tracking-tight">{title}</h1>
-		<p class="justify-self-end mb-1 uppercase tracking-tight text-[22px]">{year}</p>
-		<p class="mb-5 col-span-2 uppercase text-[12px] font-normal">{under}</p>
+	<div
+		class="absolute bottom-0 left-0 grid h-[250px] w-full grid-flow-row auto-rows-[max-content] translate-y-[100px] group-hover:translate-y-0 duration-[250ms] transition-transform grid-cols-2 overflow-hidden bg-black-300 p-5 px-[30px] font-bold"
+	>
+		<h1 class="text-[22px] uppercase tracking-tight">{title}</h1>
+		<p class="mb-1 justify-self-end text-[22px] uppercase tracking-tight">
+			{year}
+		</p>
+		<p class="col-span-2 mb-5 text-[12px] font-normal uppercase">{under}</p>
 
 		{#if isHovering}
-			<p transition:fade={fadeOptions} class="col-span-2 mb-2 text-[12px] font-normal">{description}</p>
+			<p transition:fade={fadeOptions} class="col-span-2 mb-2 text-[12px] font-normal">
+				{description}
+			</p>
 			<a transition:fade={fadeOptions} class="col-span-2 cursor-none text-[14px] font-medium underline" {href}>Visit the site</a>
 		{/if}
 	</div>

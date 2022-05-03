@@ -14,18 +14,22 @@
 	const onMouseUp = () => ($scale = 1);
 
 	let container: HTMLElement;
-	onMount(() => {
+	const findRestingPlace = () => {
 		const rect = container.getBoundingClientRect();
 
 		resting.y = rect.height / 2;
 		resting.x = rect.width / 2;
-	});
+	}
+
+	onMount(findRestingPlace);
 
 	$: if (!$isMouseOver) {
 		$pos = resting;
 		$scale = 1;
 	}
 </script>
+
+<svelte:window on:resize={findRestingPlace} />
 
 <header
 	class="relative z-10 h-screen w-full cursor-none overflow-hidden"
