@@ -16,7 +16,6 @@
 	div :global(address) {
 		@apply text-[14px] font-normal not-italic text-white-300;
 
-
 		@media (min-width: 768px) {
 			font-size: 16px;
 		}
