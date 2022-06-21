@@ -19,7 +19,7 @@
 
 		resting.y = rect.height / 2;
 		resting.x = rect.width / 2;
-	}
+	};
 
 	onMount(findRestingPlace);
 

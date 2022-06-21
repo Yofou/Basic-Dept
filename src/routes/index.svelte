@@ -9,7 +9,7 @@
 </script>
 
 <Header />
-<main class="w-full px-20 pb-[188px]">
+<main class="w-full px-5 mb-20 md:pb-[188px] md:px-20">
 	<Work />
 	<Featured />
 	<AgencySpotlight />

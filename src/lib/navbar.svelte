@@ -28,22 +28,23 @@
 {#if direction === 'up'}
 	<nav
 		transition:fly={{ y: -120 }}
-		class="fixed top-0 left-0 z-20 grid w-full grid-cols-[max-content,1fr,repeat(6,max-content),1fr] gap-[60px] px-20 py-[50px] text-white-full transition-colors duration-[250ms]"
+		class="fixed top-0 left-0 z-20 grid w-full grid-cols-[1fr,1fr] gap-[60px] px-5 py-6 text-white-full transition-colors duration-[250ms] md:grid-cols-[max-content,1fr,repeat(6,max-content),1fr] md:px-20 md:py-[50px]"
 		class:scrolled-nav={!isTop}
 	>
 		<NavbarLogo --width="" --height="" />
 
-		<a class="justify-self-end" href="/">Work</a>
-		<a href="/">About</a>
-		<a href="/">News</a>
-		<a href="/">Thinking</a>
-		<a href="/">Pledge</a>
-		<a href="/">Careers</a>
-		<a href="/">Contact</a>
+		<a class="hidden justify-self-end md:block" href="/">Work</a>
+		<a class="hidden md:block" href="/">About</a>
+		<a class="hidden md:block" href="/">News</a>
+		<a class="hidden md:block" href="/">Thinking</a>
+		<a class="hidden md:block" href="/">Pledge</a>
+		<a class="hidden md:block" href="/">Careers</a>
+		<a class="hidden md:block" href="/">Contact</a>
 
-		<button on:click={onButonClick} class="justify-self-end">
+		<button on:click={onButonClick} class="col-start-[-2] col-end-[-1] justify-self-end">
+			<p class="uppercase md:hidden">menu</p>
 			<svg
-				class="w-[22px]"
+				class="hidden w-[22px] md:block"
 				fill="currentColor"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 21 5"
@@ -58,7 +59,7 @@
 
 <style>
 	a {
-		@apply block text-[14px] font-medium uppercase;
+		@apply text-[14px] font-medium uppercase;
 		background-image: linear-gradient(white, white);
 		background-position: left bottom;
 		background-size: 0% 1px;

@@ -1,8 +1,20 @@
 <script>
+	import Button from './button.svelte';
 	import NewsCard from './news-card.svelte';
 </script>
 
-<section class="mt-[180px] flex flex-col gap-20">
+<section class="mt-[180px] flex flex-col gap-4 md:gap-20">
+	<h1 class="sr-only">Featured News</h1>
+
+	<div class="grid grid-cols-2">
+		<h1
+			class="max-w-[6ch] text-[42px] font-bold uppercase leading-[1.1] tracking-tight text-black-300 dark:text-pink-300"
+		>
+			Featured News
+		</h1>
+		<Button class="self-center justify-self-end dark:text-pink-300">View All</Button>
+	</div>
+
 	<NewsCard
 		src="/news-1.jpg"
 		title="a fresh collab with brixton just in time for spring"

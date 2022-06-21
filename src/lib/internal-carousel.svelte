@@ -8,10 +8,17 @@
 	export const pos = spring({ x: 0, y: 0 }, { stiffness: 0.4, damping: 1 });
 	const isMouseOver = writable(false);
 	export const opacity = tweened(1, { duration: 150 });
-	export const scale = tweened(1, { duration: 150 });
 
-	const onMouseDown = () => ($scale = 0.6);
-	const onMouseUp = () => ($scale = 1);
+	export const scale = tweened(1, { duration: 150 });
+	let isMouseDown = false;
+	const onMouseDown = () => {
+		isMouseDown = true;
+		$scale = 0.6;
+	};
+	const onMouseUp = () => {
+		isMouseDown = false;
+		$scale = 1;
+	};
 
 	$: if ($isMouseOver) {
 		$opacity = 1;
@@ -34,6 +41,7 @@
 			under="agency culture & onboarding"
 			year={2018}
 			description="To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future."
+			{isMouseDown}
 		/>
 		<InternalCard
 			src="/internal-moves.png"
@@ -41,6 +49,7 @@
 			under="our new hq"
 			year={2019}
 			description="To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future."
+			{isMouseDown}
 		/>
 		<InternalCard
 			src="/internal-crafted.png"
@@ -48,6 +57,7 @@
 			under="creative community"
 			year={2019}
 			description="To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future."
+			{isMouseDown}
 		/>
 		<InternalCard
 			src="/internal-brandbeats.png"
@@ -55,6 +65,7 @@
 			under="podcast series"
 			year={2017}
 			description="To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future."
+			{isMouseDown}
 		/>
 		<InternalCard
 			src="/internal-applied.png"
@@ -62,6 +73,7 @@
 			under="thoughts & perspectives"
 			year={2020}
 			description="To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future."
+			{isMouseDown}
 		/>
 	</div>
 </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade } from "svelte/transition";
+	import { fade } from 'svelte/transition';
 
 	export let src: string;
 	export let href = '/';
@@ -7,10 +7,11 @@
 	export let under: string;
 	export let year: number;
 	export let description = '';
+	export let isMouseDown = false;
 
-	const id = title.split(' ').join('');
 	const fadeOptions = { duration: 250 };
 	let isHovering = false;
+
 	const onMouseEnter = () => (isHovering = true);
 	const onMouseLeave = () => (isHovering = false);
 </script>
@@ -29,7 +30,8 @@
 	</div>
 
 	<div
-		class="absolute bottom-0 left-0 grid h-[250px] w-full grid-flow-row auto-rows-[max-content] translate-y-[100px] group-hover:translate-y-0 duration-[250ms] transition-transform grid-cols-2 overflow-hidden bg-black-300 p-5 px-[30px] font-bold"
+		class="absolute bottom-0 left-0 grid h-[250px] w-full translate-y-[100px] grid-flow-row auto-rows-[max-content] grid-cols-2 overflow-hidden bg-black-300 p-5 px-[30px] font-bold transition-transform duration-[250ms] group-hover:translate-y-0"
+		class:isMouseDown
 	>
 		<h1 class="text-[22px] uppercase tracking-tight">{title}</h1>
 		<p class="mb-1 justify-self-end text-[22px] uppercase tracking-tight">
@@ -37,11 +39,21 @@
 		</p>
 		<p class="col-span-2 mb-5 text-[12px] font-normal uppercase">{under}</p>
 
-		{#if isHovering}
+		{#if isHovering && !isMouseDown}
 			<p transition:fade={fadeOptions} class="col-span-2 mb-2 text-[12px] font-normal">
 				{description}
 			</p>
-			<a transition:fade={fadeOptions} class="col-span-2 cursor-none text-[14px] font-medium underline" {href}>Visit the site</a>
+			<a
+				transition:fade={fadeOptions}
+				class="col-span-2 cursor-none text-[14px] font-medium underline"
+				{href}>Visit the site</a
+			>
 		{/if}
 	</div>
 </div>
+
+<style>
+	.isMouseDown {
+		--tw-translate-y: 100px !important;
+	}
+</style>

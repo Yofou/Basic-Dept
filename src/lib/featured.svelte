@@ -36,10 +36,10 @@
 	const findRestingPlace = () => {
 		const rect = carousel.getBoundingClientRect();
 		resting.x = rect.left + rect.width - 60;
-		resting.y = rect.top + document.documentElement.scrollTop + 60 + 375;
+		resting.y = rect.top + document.documentElement.scrollTop + 60 + rect.height * 0.59;
 
 		scrollbar.width = (rect.width / carousel.scrollWidth) * rect.width;
-	}
+	};
 
 	onMount(findRestingPlace);
 
@@ -51,15 +51,15 @@
 
 <svelte:window on:resize={findRestingPlace} />
 
-<section class="mt-[188px]">
+<section class="mt-[50px] md:mt-[188px]">
 	<h1
-		class="max-w-[8ch] text-[42px] font-bold uppercase leading-[1.1] tracking-tighter text-black-300"
+		class="max-w-[8ch] text-[24px] font-bold uppercase leading-[1.1] tracking-tighter text-black-300 md:text-[42px]"
 	>
 		Featured Engagements
 	</h1>
 
 	<div
-		class="w-full cursor-none overflow-hidden pt-[180px] pb-[120px]"
+		class="w-full overflow-hidden pt-[90px] pb-10 md:cursor-none md:pt-[180px] md:pb-[120px]"
 		bind:this={carousel}
 		use:cursor={{ pos, isMouseOver }}
 		use:embla={{
@@ -77,7 +77,7 @@
 		<div
 			on:focus
 			on:mouseover={onHyperOver}
-			class="height-[445px] grid auto-cols-[432px] grid-flow-col gap-[144px] pl-[144px]"
+			class="height-[445px] grid auto-cols-[310px] grid-flow-col gap-24 pl-[144px] md:auto-cols-[432px] md:gap-[144px]"
 		>
 			<FeatureCard company="google" src="/google.svg" imgWidth="120px">
 				Our embedded partnership with Google is as deep as it gets. We’re the lead creative agency
