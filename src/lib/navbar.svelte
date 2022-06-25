@@ -23,7 +23,7 @@
 	});
 </script>
 
-<svelte:window on:scroll={onScroll} />
+<svelte:window on:scroll|passive={onScroll} />
 
 {#if direction === 'up'}
 	<nav
