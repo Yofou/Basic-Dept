@@ -23,6 +23,7 @@
 >
 	<div class="w-full overflow-hidden">
 		<img
+			loading="lazy"
 			class="h-full w-full scale-110 object-cover object-center transition-transform group-hover:scale-100"
 			{src}
 			alt=""

@@ -16,7 +16,7 @@
 		<Button --color="rgb(37,36,34)" --hover-color="white">See the work</Button>
 	</div>
 
-	<img class="w-[296px] justify-self-end md:w-[685px] md:justify-self-auto" src="/bd.svg" alt="" />
+	<img loading="lazy" class="w-[296px] justify-self-end md:w-[685px] md:justify-self-auto" src="/bd.svg" alt="" />
 </section>
 
 <section
@@ -28,11 +28,11 @@
 			title="patagonia"
 			description="An eCommerce experience driven by Patagonia’s brand mission"
 		>
-			<img src="/work-card-1.jpg" alt="" />
+			<img loading="lazy" src="/work-card-1.jpg" alt="" />
 		</WorkCards>
 
 		<WorkCards title="wilson" description="A century-old sports brand finding its place in culture">
-			<img src="/work-card-2.jpg" alt="" />
+			<img loading="lazy" src="/work-card-2.jpg" alt="" />
 		</WorkCards>
 
 		<WorkCards

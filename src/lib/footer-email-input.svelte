@@ -6,6 +6,7 @@
 	/>
 
 	<img
+		loading="lazy"
 		class="col-start-2 row-start-1 row-end-2 h-[18px] w-[18px] translate-y-[5px]"
 		src="/light-right-arrow.svg"
 		alt=""

@@ -14,6 +14,7 @@
 >
 	<div class="col-span-2 md:col-auto md:row-span-2 overflow-hidden">
 		<img
+			loading="lazy"
 			class="scale-105 transition-transform duration-[250ms] group-hover:scale-100"
 			{src}
 			alt=""
@@ -31,5 +32,5 @@
 			>{DateTime.fromJSDate(date).toFormat('dd.LL.yyyy')}</span
 		>
 	</p>
-	<img class="mt-5 md:mt-0 self-center md:self-auto md:row-span-2 h-[30px] w-[30px]" src="/right-arrow.svg" alt="" />
+	<img loading="lazy" class="mt-5 md:mt-0 self-center md:self-auto md:row-span-2 h-[30px] w-[30px]" src="/right-arrow.svg" alt="" />
 </a>

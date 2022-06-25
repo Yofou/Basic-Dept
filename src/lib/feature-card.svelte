@@ -5,7 +5,7 @@
 </script>
 
 <div class="transition-colors">
-	<img class="w-[var(--img-width)]" style:--img-width={imgWidth ?? 'auto'} {src} alt="" />
+	<img loading="lazy" class="w-[var(--img-width)]" style:--img-width={imgWidth ?? 'auto'} {src} alt="" />
 	<hr class="mt-5 max-w-[20px] border-y-[1px] border-black-300 text-black-300" />
 
 	<h2
