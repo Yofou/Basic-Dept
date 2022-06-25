@@ -5,17 +5,20 @@
 @font-face {
   font-family: 'Sora';
   font-weight: light;
+  font-display: swap;
   src: url(/fonts/static/Sora-Light.ttf);
 }
 
 @font-face {
   font-family: 'Sora';
+  font-display: swap;
   src: url(/fonts/static/Sora-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Sora';
   font-weight: medium;
+  font-display: swap;
   src: url(/fonts/static/Sora-Medium.ttf);
 }
 
