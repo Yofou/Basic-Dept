@@ -1,7 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Sora';
+  font-weight: light;
+  src: url(/fonts/static/Sora-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url(/fonts/static/Sora-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Sora';
+  font-weight: medium;
+  src: url(/fonts/static/Sora-Medium.ttf);
+}
 
 :root {
 	@apply scroll-smooth font-sora font-light;
