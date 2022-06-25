@@ -3,6 +3,8 @@
 	import WorkCards from './work-cards.svelte';
 	import WorkHr from './work-hr.svelte';
 	import embla from 'svelte-embla';
+	import WorkCardOne from "$static/work-card-1.jpg?webp"
+import WorkCardTwo from "$static/work-card-2.jpg?webp"
 </script>
 
 <section
@@ -28,11 +30,11 @@
 			title="patagonia"
 			description="An eCommerce experience driven by Patagonia’s brand mission"
 		>
-			<img loading="lazy" src="/work-card-1.jpg" alt="" />
+		<img loading="lazy" src={WorkCardOne} alt="" />
 		</WorkCards>
 
 		<WorkCards title="wilson" description="A century-old sports brand finding its place in culture">
-			<img loading="lazy" src="/work-card-2.jpg" alt="" />
+			<img loading="lazy" src={WorkCardTwo} alt="" />
 		</WorkCards>
 
 		<WorkCards

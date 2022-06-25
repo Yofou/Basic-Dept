@@ -4,6 +4,11 @@
 	import { writable } from 'svelte/store';
 	import cursor from './actions/cursor';
 	import InternalCard from './internal-card.svelte';
+	import InternalCulture from '$static/internal-culture.png?webp';
+	import InternalMoves from '$static/internal-moves.png?webp';
+	import InternalCrafted from '$static/internal-crafted.png?webp';
+	import InternalBrandBeats from '$static/internal-brandbeats.png?webp';
+	import InternalApplied from '$static/internal-applied.png?webp';
 
 	export const pos = spring({ x: 0, y: 0 }, { stiffness: 0.4, damping: 1 });
 	const isMouseOver = writable(false);
@@ -36,7 +41,7 @@
 >
 	<div class="grid h-full w-full auto-cols-[540px] grid-flow-col grid-rows-[100%]">
 		<InternalCard
-			src="/internal-culture.png"
+			src={InternalCulture}
 			title="culture manual"
 			under="agency culture & onboarding"
 			year={2018}
@@ -44,7 +49,7 @@
 			{isMouseDown}
 		/>
 		<InternalCard
-			src="/internal-moves.png"
+			src={InternalMoves}
 			title="Moves"
 			under="our new hq"
 			year={2019}
@@ -52,7 +57,7 @@
 			{isMouseDown}
 		/>
 		<InternalCard
-			src="/internal-crafted.png"
+			src={InternalCrafted}
 			title="Crafted"
 			under="creative community"
 			year={2019}
@@ -60,7 +65,7 @@
 			{isMouseDown}
 		/>
 		<InternalCard
-			src="/internal-brandbeats.png"
+			src={InternalBrandBeats}
 			title="BrandBeats"
 			under="podcast series"
 			year={2017}
@@ -68,7 +73,7 @@
 			{isMouseDown}
 		/>
 		<InternalCard
-			src="/internal-applied.png"
+			src={InternalApplied}
 			title="applied"
 			under="thoughts & perspectives"
 			year={2020}
