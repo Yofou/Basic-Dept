@@ -75,7 +75,7 @@
 <style>
 	.dark-footer-noisebg {
 		@apply noise-bg;
-		background: url('/noise.png') #191918;
+		background: url('/noise.webp') #191918;
 	}
 
 	#address:hover {
