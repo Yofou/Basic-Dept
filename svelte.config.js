@@ -10,7 +10,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ edge: true }),
 		vite: {
 			plugins: [
 				imagetools()
