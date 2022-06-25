@@ -20,7 +20,7 @@
 </section>
 
 <section
-	class="h-full w-full"
+	class="h-full w-full overflow-hidden"
 	use:embla={{ align: 'start', containScroll: 'trimSnaps', dragFree: true }}
 >
 	<div class="grid grid-cols-[repeat(3,minmax(287px,1fr))] gap-5">
