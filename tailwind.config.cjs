@@ -28,7 +28,7 @@ module.exports = {
 			addComponents({
 				'.noise-bg': {
 					backgroundColor: theme('colors.white.300'),
-					background: 'url(/noise.png) #f4f4f4',
+					background: 'url(/noise.png?webp) #f4f4f4',
 					animation: 'noise 1s steps(2) infinite'
 				}
 			});

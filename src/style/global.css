@@ -13,7 +13,7 @@ body {
 
 .noise-bg.dark,
 .dark .noise-bg {
-	background: url(/noise.png) theme('colors.black.300');
+	background: url(/noise.png?webp) theme('colors.black.300');
 }
 
 @keyframes noise {
